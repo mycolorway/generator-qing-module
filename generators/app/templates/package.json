@@ -1,0 +1,27 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.1",
+  "description": "A sample ui component inherited from QingModule.",
+  "homepage": "http://mycolorway.github.io/<%= name %>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mycolorway/<%= name %>.git"
+  },
+  "author": "farthinker <farthinker@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mycolorway/<%= name %>/issues"
+  },
+  "main": "dist/<%= name %>.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "qing-module": "~1.0.0"
+  },
+  "devDependencies": {
+    "qing-build": "^0.x"
+  }
+}
