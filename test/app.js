@@ -8,7 +8,8 @@ describe('generator-qing-module:app', function () {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         name: 'qing-sample',
-        githubOwner: 'mycolorway'
+        githubOwner: 'mycolorway',
+        description: 'This is a sample module based on QingModule.'
       })
       .toPromise();
   });

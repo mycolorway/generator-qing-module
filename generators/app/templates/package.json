@@ -1,7 +1,7 @@
 {
   "name": "<%= name %>",
   "version": "0.0.1",
-  "description": "A sample ui component inherited from QingModule.",
+  "description": "<%= description %>",
   "homepage": "http://mycolorway.github.io/<%= name %>",
   "repository": {
     "type": "git",

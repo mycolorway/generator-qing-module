@@ -14,7 +14,7 @@ describe '<%= className %>', ->
     $el = null
 
   beforeEach ->
-    sample = new <%= className %>
+    <%= variableName %> = new <%= className %>
       el: '.test-el'
 
   afterEach ->
@@ -22,8 +22,8 @@ describe '<%= className %>', ->
     <%= variableName %> = null
 
   it 'should inherit from QingModule', ->
-    expect(sample).to.be.instanceof QingModule
-    expect(sample).to.be.instanceof <%= className %>
+    expect(<%= variableName %>).to.be.instanceof QingModule
+    expect(<%= variableName %>).to.be.instanceof <%= className %>
 
   it 'should throw error when element not found', ->
     spy = sinon.spy <%= className %>

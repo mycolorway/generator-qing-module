@@ -15,15 +15,15 @@
 <script type="text/javascript" src="node_modules/qing-module/dist/qing-module.js"></script>
 <script type="text/javascript" src="node_modules/<%= name %>/dist/<%= name %>.js"></script>
 
-<div class="sample"></div>
+<div class="<%= name %>"></div>
 ```
 
 ```js
-var sample = new <%= className%>({
-  el: '.sample'
+var <%= variableName %> = new <%= className %>({
+  el: '.<%= name %>'
 });
 
-sample.on('ready', function(e) {
+<%= variableName %>.on('ready', function(e) {
   // do something
 });
 ```

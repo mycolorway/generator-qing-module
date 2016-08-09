@@ -23,6 +23,11 @@ module.exports = yeoman.Base.extend({
       name: 'githubOwner',
       message: 'Github user or organization name',
       default: 'mycolorway'
+    }, {
+      type: 'input',
+      name: 'description',
+      message: 'Description of the module',
+      default: 'I\'m lazy.'
     }];
 
     return this.prompt(prompts).then(function (props) {
