@@ -1,7 +1,6 @@
 'use strict';
 var path = require('path');
 var mkdirp = require('mkdirp');
-var glob = require('glob');
 var _ = require('lodash');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
@@ -50,7 +49,7 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     this.fs.copyTpl(
-      glob.sync(this.templatePath('**/*'), {dot: true}),
+      this.templatePath('**/*'),
       this.destinationRoot(),
       this.props
     );
@@ -59,6 +58,8 @@ module.exports = yeoman.Base.extend({
     this.fs.move('dist/module.js', `dist/${this.props.name}.js`);
     this.fs.move('test/module.coffee', `test/${this.props.name}.coffee`);
     this.fs.move('styles/module.scss', `styles/${this.props.name}.scss`);
+    this.fs.move('gitignore', '.gitignore');
+    this.fs.move('travis.yml', '.travis.yml');
   },
 
   install: function () {
