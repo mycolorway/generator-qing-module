@@ -1,5 +1,7 @@
 class <%= className %> extends QingModule
 
+  @name: '<%= className %>'
+
   @opts:
     el: null
 
